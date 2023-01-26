@@ -6,17 +6,17 @@ div.style.display = 'none';
 div.style.width = '30px';
 div.style.height = '20px';
 div.style.marginLeft = '20px';
-div.innerHTML = 'div';
+div.innerText = 'div';
 wrap.append(div);
 
 const textInput = document.querySelector('#text');
-textInput.addEventListener('mouseout', mouseoutBlock);
-textInput.addEventListener('mouseover', mouseoverBlock);
+textInput.addEventListener('blur', blurBlock);
+textInput.addEventListener('focus', focusBlock);
 
-function mouseoverBlock (){
+function focusBlock (){
     div.style.display = 'block';
 }
 
-function mouseoutBlock(){
+function blurBlock(){
     div.style.display = 'none';
 }
